@@ -69,6 +69,6 @@ def run_consistency_test(input_excel_path, output_excel_path):
 
 # Beispielaufruf
 if __name__ == "__main__":
-    input_file = "ConsistencyTest.xlsx"
+    input_file = "consistency_test_questions.xlsx"
     output_file = "bewertung_output.xlsx"
     run_consistency_test(input_file, output_file)
