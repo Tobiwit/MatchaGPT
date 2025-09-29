@@ -3,7 +3,7 @@ import ollama
 from codecarbon import EmissionsTracker
 from openpyxl import Workbook
 
-MODEL_NAME = "Deepseek-r1:8b"   # oder 'llama3', 'phi3', etc.
+MODEL_NAME = "Gemma3:1b"   # oder 'llama3', 'phi3', etc.
 INPUT_FILE = "prompts.csv"
 OUTPUT_FILE = "antworten.xlsx"
 N_PROMPTS = 100
@@ -18,7 +18,7 @@ def query_model(prompt):
 
 def main():
     # CSV einlesen
-    df = pd.read_csv(INPUT_FILE)
+    df = pd.read_csv(INPUT_FILE, sep=";")
     df = df.head(N_PROMPTS)
 
     results = []
